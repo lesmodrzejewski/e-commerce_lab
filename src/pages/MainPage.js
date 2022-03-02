@@ -2,7 +2,8 @@ import { useState  } from 'react';
 import Modal from 'react-modal';
 
 import '../App.css';
-// import Header from '../components/Header';
+import Header from '../components/Header';
+import MainContainer from '../containers/MainContainer';
 // import TrackerContainer from '../containers/TrackerContainer';
 // import UserContext from '../context/UserContext';
 import useToggle from '../hooks/useToggle';
@@ -28,8 +29,8 @@ const MainPage = () => {
                 <br></br>
                 <button onClick={setIsModalOpen}>OK</button>
             </Modal>
-
-            {/* <Header name={name}/> */}
+            <Header name={name}/>
+            <MainContainer />
 
         </>
     )
