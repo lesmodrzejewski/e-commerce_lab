@@ -4,7 +4,7 @@ import ShoppingBasket from "./ShoppingBasket";
 
 const MainContainer = () => {
 
-    // const [shoppingList, setShoppingList] = useState([])
+    const [shoppingList, setShoppingList] = useState([])
 
     const [inventoryList, setInventoryList] = useState (				
         [

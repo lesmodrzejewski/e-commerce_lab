@@ -1,16 +1,23 @@
 import Item from "../components/Item.js";
+import AddToBasket from "../components/AddToBasket.js";
 
 const InventoryList = ({inventoryList}) => {
 
-    const commentNodes = inventoryList.map((item) => {
+    const inventoryItemNodes = inventoryList.map((item) => {
         return (
-            <Item key={item.id} product={item.product} price={item.price} />
+
+            <div key={item.id}>
+                <Item key={item.id} product={item.product} price={item.price} />
+                <AddToBasket key={item.id}/>
+            </div>
+
         );
     });
 
     return (
+
         <>
-            {commentNodes}
+            {inventoryItemNodes}
         </>
     );
 }
