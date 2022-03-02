@@ -1,5 +1,5 @@
 import {createContext} from 'react';
 
-const UserContext = createContext();
+const BasketContext = createContext();
 
-export default UserContext;
+export default BasketContext;

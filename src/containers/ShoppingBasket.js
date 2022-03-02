@@ -1,14 +1,28 @@
-import { useState } from "react";
+import { useContext } from "react";
+import BasketContext from "../context/BasketContext";
+import Item from "../components/Item"
 
 const ShoppingBasket = () => {
 
-    const [shoppingBasket, setShoppingBasket] = useState([])
+    const {shoppingBasket} = useContext(BasketContext)
 
-    
-    
-    
-    return ( <h1>Basket</h1> );
+    const shoppingBasketNodes = shoppingBasket.map((item) => {
 
+        return (
+            <div key={Date.now()}>
+                <Item product={item.product} price={item.price} />
+            </div>
+
+        );
+    });
+
+    return (
+
+        <>
+            {shoppingBasketNodes}
+        </>
+    );       
+    
 
 }
 

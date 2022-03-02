@@ -29,14 +29,12 @@ const MainContainer = () => {
 
     return( 
         <>
-            <h1>Inventory:</h1>
-            {/* <BasketContext.Provider= {id, product, price}> */}
-                <InventoryList inventoryList={inventoryList} />
-            <h1>Basket:</h1>
-            {/* <BasketContext.Consumer={id, product, price}> */}
-                <ShoppingBasket shoppingBasket={shoppingBasket}/>
-            
-
+            <BasketContext.Provider value={{shoppingBasket, setShoppingBasket}}>
+                <h1>Inventory:</h1>
+                <InventoryList inventoryList={inventoryList}/>
+                <h1>Basket:</h1>
+                <ShoppingBasket/>
+            </BasketContext.Provider>
         </>
      )
 
