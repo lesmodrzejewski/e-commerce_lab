@@ -6,10 +6,12 @@ const ShoppingBasket = () => {
 
     const {shoppingBasket} = useContext(BasketContext)
 
-    const shoppingBasketNodes = shoppingBasket.map((item) => {
+    let i = 0;
 
+    const shoppingBasketNodes = shoppingBasket.map((item) => {
+        i+=1;
         return (
-            <div key={Date.now()}>
+            <div key={i}>
                 <Item product={item.product} price={item.price} />
             </div>
 

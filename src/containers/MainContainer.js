@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import InventoryList from "./InventoryList";
 import ShoppingBasket from "./ShoppingBasket";
 import BasketContext from "../context/BasketContext"
@@ -7,7 +7,7 @@ const MainContainer = () => {
 
     const [shoppingBasket, setShoppingBasket] = useState([])
 
-    const [inventoryList, setInventoryList] = useState (				
+    const inventoryList =			
         [
             {
             id: 1,
@@ -24,8 +24,7 @@ const MainContainer = () => {
             product: "Eggs",
             price: "£1.20"
             }
-        ]
-    );
+        ];
 
     return( 
         <>
