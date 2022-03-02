@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import InventoryList from "./InventoryList";
 import ShoppingBasket from "./ShoppingBasket";
+import BasketContext from "../context/BasketContext"
 
 const MainContainer = () => {
 
-    const [shoppingList, setShoppingList] = useState([])
+    const [List, setShoppingList] = useState([])
 
     const [inventoryList, setInventoryList] = useState (				
         [
@@ -31,7 +32,11 @@ const MainContainer = () => {
             <h1>Inventory:</h1>
             <InventoryList inventoryList={inventoryList} />
             <h1>Basket:</h1>
-            <ShoppingBasket />
+            <BasketContext.Provider={}>
+                <ShoppingBasket />
+            </BasketContext.Provider=>
+            
+
         </>
      )
 
