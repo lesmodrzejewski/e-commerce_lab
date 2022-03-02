@@ -5,7 +5,7 @@ import BasketContext from "../context/BasketContext"
 
 const MainContainer = () => {
 
-    const [List, setShoppingList] = useState([])
+    const [shoppingBasket, setShoppingBasket] = useState([])
 
     const [inventoryList, setInventoryList] = useState (				
         [
@@ -30,11 +30,11 @@ const MainContainer = () => {
     return( 
         <>
             <h1>Inventory:</h1>
-            <InventoryList inventoryList={inventoryList} />
+            {/* <BasketContext.Provider= {id, product, price}> */}
+                <InventoryList inventoryList={inventoryList} />
             <h1>Basket:</h1>
-            <BasketContext.Provider={}>
-                <ShoppingBasket />
-            </BasketContext.Provider=>
+            {/* <BasketContext.Consumer={id, product, price}> */}
+                <ShoppingBasket shoppingBasket={shoppingBasket}/>
             
 
         </>
